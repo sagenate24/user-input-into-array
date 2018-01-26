@@ -1,51 +1,63 @@
 <html>
-    <head>
-        <title>AWESOME</title>
-    </head>
-    <body>
-        <header></header>
-        <main></main>
-        <!-- <button id="awesome">This does a thing</button> -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.js"></script>
-        <script>
-            (function () {
-                var rootThing = document.querySelector('main');
-                var headerQQ = document.querySelector('header');
-                renderHeader ();
+
+<head>
+    <title>AWESOME</title>
+</head>
+
+<body>
+    <header></header>
+    <main></main>
+    <!-- <button id="awesome">This does a thing</button> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.js"></script>
+    <script>
+        (function () {
+            var rootThing = document.querySelector('main');
+            var headerQQ = document.querySelector('header');
+            renderHeader();
 
 
-                function renderHeader () {
-                    headerQQ.innerHTML = `
+            function renderHeader() {
+                headerQQ.innerHTML = `
                     <button type="button" id="renderHomePage" >Home</button>
                     <button type="button" class="AbitYou" >About you and things </button>
                     <button type="button" class="theDQuestion" >The D Question</button>
-                    `
-                }
+                    `;
+                document.querySelector("#renderHomePage").addEventListener("click", renderHomePage);
+                document.querySelector(".AbitYou").addEventListener("click", renderAboutPage);
+                document.querySelector(".theDQuestion").addEventListener("click", renderNateSucksTheDPage);
+                
+                
+            }
 
-                function renderHomePage () {
-                    rootThing.innerHTML = `
+            function renderHomePage() {
+                rootThing.innerHTML = `
                         <div>
                             <h3> Home Page </h3>
                             
                         </div>
 
                     `
-                    
-                }
 
-                function renderAboutPage () {
-                    rootThing.innerHTML = `
+
+            }
+
+            function renderAboutPage() {
+                rootThing.innerHTML = `
                         <div>
                             <h3>About Page </h3>
                             
                         </div>
 
                     `
-                    
-                }
+
+            }
+
+            function renderNateSucksTheDPage() {
+
                 
-                function renderNateSucksTheDPage () {
-                    rootThing.innerHTML = `
+
+
+                rootThing.innerHTML = `
                         <div>
                             <h3>Did you know... that nate sucks the D? minor </h3>
                             <button type="button" id="yesIDidKnow">Yes</button>
@@ -53,9 +65,37 @@
                             <div id="response"></div>
                         </div>
                     `;
+                    document.querySelector("#yesIDidKnow").addEventListener("click", yesAwnser);
+                    document.querySelector("#noHeDoesntYouPieceOfShit").addEventListener("click", noAwnser);
                     
-                }
-            })()
-        </script>
-    </body>
+                    
+                     
+
+
+            }
+            function noAwnser() {
+                
+                document.querySelector("#response") .innerHTML = `
+                    <div>
+                        <h3>I am glad you think that of me kind sir or maam.</h3>
+                    </div>
+
+                    `;
+
+            }
+            
+            function yesAwnser() {
+                
+                document.querySelector("#response") .innerHTML = `
+                    <div>
+                        <h3>Damn right you clown head</h3>
+                    </div>
+
+                    `;
+
+            }
+        })()
+    </script>
+</body>
+
 </html>
