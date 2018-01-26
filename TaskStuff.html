@@ -11,6 +11,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.js"></script>
     <script>
         (function () {
+        
             var rootThing = document.querySelector('main');
             var headerQQ = document.querySelector('header');
             renderHeader();
@@ -40,16 +41,50 @@
 
 
             }
-
             function renderAboutPage() {
+                
                 rootThing.innerHTML = `
                         <div>
                             <h3>About Page </h3>
-                            
+                            <div class="infoStuff"></div>
                         </div>
 
-                    `
+                    `;
 
+
+
+                    function doSomethingFnOfDoom () {
+                        console.log(this);
+                        alert('GO FUCK YOURSELF! MY NAME IS ' + this.firstName + ' - ' + this.age)
+                    }
+                    
+
+                    var nate = {
+                        firstName: 'nate',
+                        lastName: 'sage',
+                        age: 19,
+                        sex: 'male',
+                        doSomething: doSomethingFnOfDoom
+                    };
+
+                    var alex = {
+                        firstName: 'alex',
+                        lastName: 'sage',
+                        age: 22,
+                        sex: 'male',
+                        doSomething: doSomethingFnOfDoom
+                    }
+
+                    nate.doSomething();
+                    alex.doSomething();
+
+                    document.querySelector('.infoStuff').innerHTML = `
+                    <div>What is nate's full name?   ${ nate.firstName + ' ' + nate.lastName  }</div>
+                    <div>What is nate's firstname?   ${ nate.firstName }</div>
+                    <div>What is nate's lastName?   ${ nate.lastName }</div>
+                    <div>Age?   ${ nate.age }</div>
+                    <div>Male or Female?   ${ nate.sex }</div> 
+                    `
             }
 
             function renderNateSucksTheDPage() {
