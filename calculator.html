@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="calculator.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="theEverythingBox">
+        
+        <h2>Type in a number!</h2>
+        
+        <div id="calculatorHeader">
+            <input type="number" id="FirstInputNumber"/>
+            <input type="number" id="SecondInputNumber"/>
+        </div>
+        <div id="calculatorBody">
+            <button id="addButton">+</button><br />
+            <button id="subtractButton">-</button><br />
+            <button id="multiplyButton">*</button><br />
+            <button id="divideButton">/</button>
+        </div>
+        <h1 id="boxForOutputs"></h1>
+    </div>
+    <script>
+
+        document.querySelector("#addButton").addEventListener("click", addInputs);
+        document.querySelector("#subtractButton").addEventListener("click", subtractInputs);
+        document.querySelector("#multiplyButton").addEventListener("click", multiplyInputs);
+        document.querySelector("#divideButton").addEventListener("click", divideInputs);
+
+
+
+        function addInputs() {
+            var x = document.querySelector("#FirstInputNumber").value;
+            var y = document.querySelector("#SecondInputNumber").value;
+            var z = Number(x) + Number(y);
+            document.getElementById("boxForOutputs").innerHTML = (z);
+
+        }
+        function subtractInputs() {
+            var x = document.querySelector("#FirstInputNumber").value;
+            var y = document.querySelector("#SecondInputNumber").value;
+            var z = Number(x) - Number(y);
+            document.getElementById("boxForOutputs").innerHTML = (z);
+
+        }
+        function multiplyInputs() {
+            var x = document.querySelector("#FirstInputNumber").value;
+            var y = document.querySelector("#SecondInputNumber").value;
+            var z = Number(x) * Number(y);
+            document.getElementById("boxForOutputs").innerHTML = (z);
+
+        }
+        function divideInputs() {
+            var x = document.querySelector("#FirstInputNumber").value;
+            var y = document.querySelector("#SecondInputNumber").value;
+            var z = Number(x) / Number(y);
+            document.getElementById("boxForOutputs").innerHTML = (z);
+
+        }
+
+    </script>
+
+</body>
+
+</html>

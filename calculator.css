@@ -1,0 +1,36 @@
+html {
+    background: #100a1c;
+    background-image:
+      radial-gradient(50% 30% ellipse at center top, #201e40 0%, rgba(0,0,0,0) 100%),
+      radial-gradient(60% 50% ellipse at center bottom, #261226 0%, #100a1c 100%);
+    background-attachment: fixed;
+    color: #6cacc5;
+  }
+#theEverythingBox {
+      height: 400px;
+      width: 300px;
+      margin: 0 auto;
+     
+  }
+#calculatorHeader {
+    padding: 10px;
+}
+#calculatorBody {
+   
+    float: right;
+    padding: 10px;
+}
+input {
+    height: 40px;
+    width: 130px;
+    color: black;
+    font-size: 20px;
+}
+button {
+    background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+    border-radius: 2px;
+    height: 55px;
+    width: 55px;
+    margin: 5px;
+    font-size: 35px;
+}
