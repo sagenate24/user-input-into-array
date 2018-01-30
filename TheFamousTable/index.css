@@ -29,9 +29,13 @@ main {
 }
 
 footer {
-    margin-top: 40px;
+
     text-align: center;
     color: #333;
+    margin-top: 230px;
+    position: absolute;
+    margin-left: center;
+ 
 }
 main h3 {
     margin-bottom: 20px;

@@ -56,7 +56,8 @@ document.write('<tr><th>First Name</th><th>Last Name</th><th>Sex</th><th>Age</th
 
 for (i = 0; i < famousPeople.length; i++)
 {
-  document.write('<tr><td>' + famousPeople[i].firstName + '</td><td>' + famousPeople[i].lastName + '</td><td>' + famousPeople[i].sex + '</td><td>' + famousPeople[i].age + '</td></tr>')
+
+document.write('<tr><td>' + famousPeople[i].firstName + '</td><td>' + famousPeople[i].lastName + '</td><td>' + famousPeople[i].sex + '</td><td>' + famousPeople[i].age + '</td></tr>')
 }
 
 
