@@ -51,9 +51,10 @@ var famousPeople = [
   }
 ];
 
-var putIntoMyDamnTable = document.querySelector("#heyItsATable");
+var putIntoTableHeader = document.querySelector("#heyItsAHeadTable");
+var putIntoTableBody = document.querySelector("#heyItsABodyTable");
 
-putIntoMyDamnTable.innerHTML += '<tr><th>First Name</th>'
+putIntoTableHeader.innerHTML += '<tr><th>First Name</th>'
 + '<th>Last Name</th>'
 + '<th>sex</th>'
 + '<th>age</th></tr>'
@@ -62,7 +63,7 @@ putIntoMyDamnTable.innerHTML += '<tr><th>First Name</th>'
 
 var myFunction = function (item) {
 
-  putIntoMyDamnTable.innerHTML += '<tr><td>' + item.firstName + '</td>'
+  putIntoTableBody.innerHTML += '<tr><td>' + item.firstName + '</td>'
     + '<td>' + item.lastName + '</td>'
     + '<td>' + item.sex + '</td>'
     + '<td>' + item.age + '</td></tr>'
