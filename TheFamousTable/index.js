@@ -54,19 +54,24 @@ var famousPeople = [
 var putIntoTableHeader = document.querySelector("#heyItsAHeadTable");
 var putIntoTableBody = document.querySelector("#heyItsABodyTable");
 
-putIntoTableHeader.innerHTML += '<tr><th>First Name</th>'
-+ '<th>Last Name</th>'
-+ '<th>sex</th>'
-+ '<th>age</th></tr>'
-
-;
+putIntoTableHeader.innerHTML +=
+  `
+<tr><th>First Name</th>
+<th>Last Name</th>
+<th>sex</th>
+<th>age</th></tr>
+`
+  ;
 
 var myFunction = function (item) {
 
-  putIntoTableBody.innerHTML += '<tr><td>' + item.firstName + '</td>'
-    + '<td>' + item.lastName + '</td>'
-    + '<td>' + item.sex + '</td>'
-    + '<td>' + item.age + '</td></tr>'
+  putIntoTableBody.innerHTML +=
+    `
+    <tr><td>${item.firstName}</td>
+    <td>${item.lastName}</td>
+    <td>${item.sex}</td>
+    <td>${item.age}</td></tr>
+    `
     ;
 }
 famousPeople.forEach(myFunction);
