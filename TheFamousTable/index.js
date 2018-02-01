@@ -53,30 +53,19 @@ var famousPeople = [
 
 var putIntoMyDamnTable = document.querySelector("#heyItsATable");
 
+putIntoMyDamnTable.innerHTML += '<tr><th>First Name</th>'
++ '<th>Last Name</th>'
++ '<th>sex</th>'
++ '<th>age</th></tr>'
 
-putIntoMyDamnTable.innerHTML += '<tr><th>First Name</th><th>Last Name</th><th>Sex</th><th>Age</th></tr>';
+;
 
-for (i = 0; i < famousPeople.length; i++)
-{
+var myFunction = function (item) {
 
-  putIntoMyDamnTable.innerHTML += ('<tr><td>' + famousPeople[i].firstName + '</td><td>' + famousPeople[i].lastName + '</td><td>' + famousPeople[i].sex + '</td><td>' + famousPeople[i].age + '</td></tr>');
+  putIntoMyDamnTable.innerHTML += '<tr><td>' + item.firstName + '</td>'
+    + '<td>' + item.lastName + '</td>'
+    + '<td>' + item.sex + '</td>'
+    + '<td>' + item.age + '</td></tr>'
+    ;
 }
-
-
-
-/*for (i = 0; i < famousPeople.length; i++){
-  document.write('<tr><td>' + famousPeople[i].lastName + '</td></tr>')
-}
-document.write('</table>');
-function myFirstNameFunction() {
-
-  for (i = 0; i < famousPeople.length; i++) {
-    if (famousPeople.length > i) {
-      var x = document.querySelector('.firstColumn');
-    = document.write(famousPeople[i].firstName);
-    }
-  }
-}
-
-myFirstNameFunction()
-*/
+famousPeople.forEach(myFunction);
